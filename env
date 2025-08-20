@@ -1,0 +1,45 @@
+# Environment configuration for Shelton Resort project
+# Fill in real values for your environment. Lines starting with # are comments.
+
+# --- SMTP (PHPMailer) ---
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=beach.shelton@gmail.com
+SMTP_PASS=mzteqdlnydwaqejf
+# tls or ssl
+SMTP_ENCRYPTION=tls
+
+# Optional overrides; if empty, defaults are used
+SMTP_FROM=beach.shelton@gmail.com
+SMTP_FROM_NAME=Shelton Resort
+
+# Debugging (set to 0 in production)
+SMTP_DEBUG=0
+SMTP_DEBUG_OUTPUT=error_log
+SMTP_ALLOW_SELF_SIGNED=true
+
+# Branding for email templates
+BRAND_NAME=Shelton Resort
+EMAIL_PRIMARY_COLOR=#7ab4a1
+# Use embedded logo by default. To use an external URL, replace with https://...
+EMAIL_LOGO_URL=cid:brandlogo
+# Absolute path optional; defaults to pics/logo2.png
+# EMAIL_LOGO_PATH=C:\xampp\htdocs\sbh\pics\logo2.png
+
+# Where admin inquiries are sent. Defaults to SMTP_FROM if left blank
+INQUIRY_TO=beach.shelton@gmail.com
+
+# --- SMS Provider (Textbee or compatible) ---
+# Update these with your actual SMS gateway details
+SMS_API_URL=https://api.textbee.dev/api/v1/gateway
+SMS_DEVICE_ID=6887177d6eec0f67df7d3daa
+SMS_API_KEY=0d2de39f-8e1e-4996-a699-9d196a5e62d9
+SMS_TIMEOUT=15
+
+# --- Database (optional; already has sensible defaults) ---
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_USER=root
+# DB_PASS=
+# DB_NAME=shelton_db
+# DB_CHARSET=utf8mb4

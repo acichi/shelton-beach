@@ -1,0 +1,176 @@
+/* SBH global modal, tooltip, and notification theming */
+
+:root {
+	/* Ensure both naming schemes are available */
+	--sbh-primary: #7ab4a1;
+	--sbh-accent-orange: #e08f5f;
+	--sbh-accent-pink: #e19985;
+	--sbh-black: #000000;
+	--sbh-white: #ffffff;
+	--sbh-light-gray: #f8f9fa;
+	--sbh-medium-gray: #6c757d;
+	--sbh-shadow: rgba(0, 0, 0, 0.05);
+	--sbh-shadow-hover: rgba(0, 0, 0, 0.15);
+
+	/* Aliases used by some scripts */
+	--color-aqua: var(--sbh-primary);
+	--color-orange: var(--sbh-accent-orange);
+	--color-pink: var(--sbh-accent-pink);
+}
+
+/* Bootstrap modal overrides */
+.modal-content {
+	border: 0;
+	border-radius: 16px;
+	box-shadow: 0 20px 60px var(--sbh-shadow-hover);
+}
+
+.modal-header {
+	border: 0;
+	padding: 1rem 1.25rem 0.5rem 1.25rem;
+}
+
+.modal-title {
+	font-family: "Playfair Display", serif;
+	font-weight: 700;
+	color: var(--sbh-black);
+}
+
+.modal-body {
+	padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+}
+
+.modal-footer {
+	border: 0;
+	padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+}
+
+.btn-close:focus {
+	box-shadow: none;
+}
+
+.modal-backdrop.show {
+	opacity: .25;
+	background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
+}
+
+/* Tooltips & Popovers (bubbles) */
+.tooltip .tooltip-inner {
+	background-color: var(--sbh-black);
+	color: var(--sbh-white);
+	font-size: 12px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px var(--sbh-shadow-hover);
+}
+
+.tooltip .tooltip-arrow::before { background-color: var(--sbh-black); }
+
+.popover {
+	border: 0;
+	border-radius: 14px;
+	box-shadow: 0 16px 40px var(--sbh-shadow-hover);
+}
+
+.popover-header {
+	background: var(--sbh-light-gray);
+	border: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+}
+
+.popover-body { color: var(--sbh-black); }
+
+/* SweetAlert2 theming */
+.swal2-popup {
+	border-radius: 16px !important;
+	box-shadow: 0 20px 60px var(--sbh-shadow-hover) !important;
+}
+
+.swal2-title {
+	font-family: "Playfair Display", serif !important;
+	font-weight: 700 !important;
+	color: var(--sbh-black) !important;
+}
+
+.swal2-html-container { color: var(--sbh-medium-gray) !important; }
+
+.swal2-styled.swal2-confirm {
+	background: var(--color-aqua) !important;
+	border: 2px solid var(--color-aqua) !important;
+	border-radius: 25px !important;
+	font-family: "Poppins", sans-serif !important;
+	font-weight: 600 !important;
+}
+
+.swal2-styled.swal2-confirm:hover { filter: brightness(.95) !important; }
+
+.swal2-styled.swal2-cancel {
+	background: var(--sbh-medium-gray) !important;
+	border: 2px solid var(--sbh-medium-gray) !important;
+	border-radius: 25px !important;
+	font-family: "Poppins", sans-serif !important;
+	font-weight: 600 !important;
+}
+
+.swal2-icon.swal2-success { border-color: var(--color-aqua) !important; color: var(--color-aqua) !important; }
+.swal2-icon.swal2-warning { border-color: var(--color-orange) !important; color: var(--color-orange) !important; }
+.swal2-icon.swal2-error { border-color: var(--sbh-accent-pink) !important; color: var(--sbh-accent-pink) !important; }
+
+/* Toast (SweetAlert2 toast mode) */
+.swal2-container.swal2-top-end > .swal2-popup {
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+}
+
+/* Bootstrap alerts, toasts fallback */
+.alert {
+	border: 0;
+	border-radius: 14px;
+	box-shadow: 0 10px 28px var(--sbh-shadow);
+}
+
+.alert-success { background: rgba(122, 180, 161, 0.12); color: var(--sbh-black); }
+.alert-warning { background: rgba(224, 143, 95, 0.12); color: var(--sbh-black); }
+.alert-danger { background: rgba(225, 153, 133, 0.12); color: var(--sbh-black); }
+.alert-info { background: rgba(122, 180, 161, 0.08); color: var(--sbh-black); }
+
+/* Buttons alignment within modals */
+.modal-footer .btn + .btn { margin-left: .5rem; }
+
+/* DataTables export buttons themed to SBH palette */
+.dt-buttons .dt-button.buttons-copy,
+.dt-buttons .btn.buttons-copy,
+button.dt-button.buttons-copy,
+a.dt-button.buttons-copy,
+.dt-buttons .btn-secondary.buttons-copy,
+.buttons-copy.btn {
+	color: #fff !important;
+	background: var(--color-aqua) !important;
+	border-color: var(--color-aqua) !important;
+}
+.dt-buttons .dt-button.buttons-excel,
+.dt-buttons .btn.buttons-excel,
+button.dt-button.buttons-excel,
+a.dt-button.buttons-excel,
+.dt-buttons .btn-secondary.buttons-excel,
+.buttons-excel.btn {
+	color: #fff !important;
+	background: var(--color-orange) !important;
+	border-color: var(--color-orange) !important;
+}
+.dt-buttons .dt-button.buttons-csv,
+.dt-buttons .btn.buttons-csv,
+button.dt-button.buttons-csv,
+a.dt-button.buttons-csv,
+.dt-buttons .btn-secondary.buttons-csv,
+.buttons-csv.btn {
+	color: #fff !important;
+	background: var(--color-pink) !important;
+	border-color: var(--color-pink) !important;
+}
+.dt-buttons .dt-button:hover,
+.dt-buttons .btn:hover { filter: brightness(.92); }
+
+
